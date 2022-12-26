@@ -3,3 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+header, footer { background-color: bisque;}
+h1 {color: blue;}
+h2 {color: red;}
+p {font-size: 1.3rem;}
