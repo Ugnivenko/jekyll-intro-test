@@ -1,8 +1,38 @@
 ---
 layout: default
 title: Home Page
+news:
+- title: Big Sale 
+  description: Exciting things are happening
+  date: February 3rd 2023
+  category: promo 
+  url: https://www.sale.com 
+- title: New Offers 
+  description: Holiday is just around the corner
+  date: March 20th 2023
+  category: special offer  
+  url: https://www.sale.com 
+- title: Private Tour
+  description: Make your memories for life 
+  date: April 25th 2023
+  category: exclusive eackage 
+  url: https://www.sale.com 
 ---
-<section> 
-    <h1>Welcome to your homepage!</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, possimus ducimus magni inventore veritatis at itaque libero mollitia, cum fugiat beatae est molestiae quos tempore a impedit ut iste? Nostrum.</p>
-</section>
+
+<section class="grid-spaceBetween padded bg-featured latest-news">
+
+    {% for item in page.news %} 
+  <!-- First Card  1 -->
+    <div class="col-4_xs-8 ">
+        <div class="card"> 
+        <div class="bg-image"> <span> {{item.category}} </span> </div>
+        <div class="post-info">
+            <p class="date"> {{item.date}} </p>
+            <h3> {{item.title}} </h3>
+            <p> {{item.description}} </p>
+            <a href="{{item.url}}"> Find out more &nbsp; &#10095; </a>
+        </div>
+    </div>
+    </div> 
+    {% endfor %}
+  </section> 
