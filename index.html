@@ -4,12 +4,12 @@ title: Home Page
 news:
 - title: Big Sale 
   description: Exciting things are happening
-  date: February 3rd 2023
+  date: 2023-02-23
   category: promo 
   url: https://www.sale.com 
 - title: New Offers 
   description: Holiday is just around the corner
-  date: March 20th 2023
+  date: March 20 2023
   category: special offer  
   url: https://www.sale.com 
 - title: Private Tour
@@ -29,7 +29,7 @@ my_variable: testimonial.html
         <div class="card"> 
         <div class="bg-image"> <span> {{item.category}} </span> </div>
         <div class="post-info">
-            <p class="date"> {{item.date}} </p>
+            <p class="date"> {{item.date | date_to_string}} </p>
             <h3> {{item.title}} </h3>
             <p> {{item.description}} </p>
             <a href="{{item.url}}"> Find out more &nbsp; &#10095; </a>

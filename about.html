@@ -11,4 +11,8 @@ title: About Page
     <h2> Our vision </h2>
     <h2> Our mission </h2> 
 
+ {% for person in site.data.people.name %} 
+    {{ person.name }}
+{% endfor %}
+
 </section>
