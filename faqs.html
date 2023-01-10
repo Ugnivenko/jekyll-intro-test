@@ -1,0 +1,23 @@
+---
+faqs:
+  - question: How to book a trip?
+    answer: This is the answer 
+  - question: I want to cancel my booking, can I get a full refund?
+    answer: This is the answer 
+  - question: Do I need to buy travel insurance? 
+    answer: This is the answer 
+  - question: Entry and health requirements 
+    answer: This is the answer 
+---
+
+<h2> Choosing a trip </h2>
+{% for topic in page.faqs %}
+<div>
+    <input id="tab-{{topic.question | slugify}}" type="checkbox" name="tabs" />
+    <lable for="tab-{{topic.question | slugify}}">
+        {{topic.question}} </lable>
+    <div>
+        <p> {{topic.answer}}</p>
+    </div>
+</div>
+{% endfor %}
