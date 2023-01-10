@@ -1,0 +1,44 @@
+---
+title: Fruit (Complex Arrays)
+fruit: 
+  - name: Apple
+    price: 3
+    description_html: |
+      <p> Golden Smith apples are great for your health. They are packed with vitamins. </p>
+  - name: Pear
+    price: 6.5
+      <p> Pears are sweet and juicy. We love them. </p>
+  - name: Banana
+    price: 2
+      <p> Great to add fresh bananas into the diet when you do lots of sports. </p>
+  - name: Pineapple
+    price: 4 
+      <p> Awesome antioxidants, you should eat them to boost your immunity. </p>
+dessert:
+  - name: apple pie
+    taste: sour
+  - name: chocolate banana cookie
+    taste: sweet 
+  - name: pineapple rolls
+    taste: sour
+---
+<section> 
+
+  {% for item in page.fruit limit:2 offset:1 %}
+    <p> {{item.name}} - ${{ item.price }} </p> 
+    {{description_html}}
+  {% endfor %}
+
+</section>
+
+<section>
+  <h2> Recepies </h2>
+  {% assign sour-dessert = page.dessert | where: 'taste', 'sour' %}
+    {% for dessert in sour-dessert %}
+   
+    <div id="{{dessert.name | slugify}}"> 
+      <h3> {{dessert.name}}</h3>
+      {{description_html}}
+    </div>
+  {% endfor %}
+</section>
