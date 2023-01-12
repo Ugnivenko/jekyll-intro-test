@@ -1,5 +1,8 @@
+--- 
 
+--- 
 
-{% for person in site.data.people.name %} 
-    {{ person.name }}
+{% for person in site.data.information.people %} 
+   <p> {{ person.name }} 
+       {{ person.team }} </p>
 {% endfor %}

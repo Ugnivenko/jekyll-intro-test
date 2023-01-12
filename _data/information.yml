@@ -1,0 +1,12 @@
+people:
+  - name: Mike
+    team: Marketing
+    occupation: Manager
+
+  - name: Joe
+    team: Sales 
+    occupation: Supervisor 
+
+  - name: Mike
+    team: Marketing 
+    occupation: Web developer  
